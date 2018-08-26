@@ -1,0 +1,36 @@
+﻿@model Snake.Models.ChannelModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="alert alert-warning" role="alert">
+    Zmodyfikuj kanał
+</div>
+
+<hr />
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nazwa</label>
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color" class="control-label">Kolor</label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Zapisz" class="btn btn-success my-button" />
+            </div>
+        </form>
+    </div>
+
+
+<div>
+    <a class="btn btn-warning my-button" asp-action="Index" asp-controller="Channel">Lista kanałów</a>
+</div>
+

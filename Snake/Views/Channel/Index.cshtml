@@ -1,0 +1,53 @@
+﻿@model Snake.Models.UserModel
+
+<p>
+    <a class="btn btn-success" asp-action="Create" asp-controller="Channel">Nowy kanał</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa
+            </th>
+            <th>
+                Kolor
+            </th>
+            <th>
+                Akcje
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Channels)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Color
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @if (Model.UserName != item.Name)
+                            {
+                                <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.ID">Edytuj</a>
+                                <a class="dropdown-item" asp-action="Details" asp-route-id="@item.ID">Otwórz kanał</a>
+                                <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.ID">Usuń</a>
+                            }
+                            else
+                            {
+                                <a class="dropdown-item" asp-action="Details" asp-route-id="@item.ID">Otwórz kanał</a>
+                            }
+                        </div>
+                        </div>
+
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>

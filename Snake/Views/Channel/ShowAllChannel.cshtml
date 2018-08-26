@@ -1,0 +1,40 @@
+﻿@model List<Snake.Models.ChannelModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Autor
+            </th>
+            <th>
+                Nazwa
+            </th>
+            <th>
+                Kolor
+            </th>
+            <th>
+                Akcje
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.UserAuthor.UserName
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Color
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.ID" asp-route-all ="1">Otwórz kanał</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

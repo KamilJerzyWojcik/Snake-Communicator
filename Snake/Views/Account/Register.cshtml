@@ -1,0 +1,40 @@
+﻿@model Snake.ViewModels.RegisterViewModel
+
+<div id="register" class="mt-5">
+    <div class="container">
+        <div id="register-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div class="login-box col-md-12">
+                    <form id="register-form" class="form" asp-action="Register" method="post">
+                        <h3 class="text-center text-info">Register</h3>
+                        <div class="form-group">
+                            <label asp-for="Login"></label>
+                            <input class="form-control d-block" style="width: 100%" asp-for="Login" placeholder="Login" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input type="password" class="form-control d-block showpassword" style="width: 100%" asp-for="Password" placeholder="Password" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RepeatPassword"></label>
+                            <input type="password" class="form-control d-block showpassword" style="width: 100%" asp-for="RepeatPassword" placeholder="Repeat Password" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input class="form-control d-block" style="width: 100%" asp-for="Email" placeholder="E-mail" />
+                        </div>
+
+                        <div asp-validation-summary="All"></div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show Password</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

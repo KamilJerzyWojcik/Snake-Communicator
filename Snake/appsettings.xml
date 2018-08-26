@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <connectionString>Data Source=.\SQLEXPRESS;Initial Catalog=SnakeMVCDb;Integrated Security=True</connectionString>
+</root>

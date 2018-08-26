@@ -1,0 +1,39 @@
+﻿@model Snake.Models.ChannelModel
+
+@if (!(ViewBag.info is null))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.info
+    </div>
+
+}
+
+
+<div class="center">
+    <form asp-action="Create" asp-controller="Channel">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <select asp-for="Color" asp-items="@ViewBag.listColor">
+                <option>Wybierz kolor</option>
+            </select>
+
+        </div>
+
+        
+
+        <div class="form-group">
+            <input type="submit" value="Dodaj kanał" class="btn btn-success" />
+        </div>
+    </form>
+</div>
+
+
+<div>
+    <a class="btn btn-warning" asp-action="Index" asp-controller="Home">Powrót</a>
+</div>
+

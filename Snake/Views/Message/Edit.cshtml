@@ -1,0 +1,29 @@
+﻿@model Snake.Models.MessageModel
+
+
+<hr />
+<div class="center">
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Message" class="control-label">Nowa wiadomość</label>
+                <input asp-for="Message" class="form-control" />
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-warning" type="submit" value="Zapisz" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-info" asp-action="Details" asp-route-id="@ViewBag.channelId" asp-controller="Channel">Powrót</a>
+</div>
+

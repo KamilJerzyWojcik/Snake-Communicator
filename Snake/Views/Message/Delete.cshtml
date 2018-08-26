@@ -1,0 +1,25 @@
+﻿@model Snake.Models.MessageModel
+
+<div class="alert alert-danger" role="alert">
+    Czy na pewno chcesz usunąć wiadomość?
+</div>
+<hr />
+<p>Wiadomość:</p>
+
+<div class="@ViewBag.channel.Color">
+    <div class="message">
+        <p>@Model.Message</p>
+    </div>
+</div>
+
+<div class="center">
+    <form asp-action="Delete">
+        <div class="form-group">
+            <input type="hidden" asp-for="ID" />
+            <input type="submit" value="Usuń" class="btn btn-danger" />
+        </div>
+    </form>
+</div>
+<div>
+    <a class="btn btn-info" asp-action="Details" asp-route-id="@ViewBag.channel.ID" asp-controller="Channel">Powrót</a>
+</div>

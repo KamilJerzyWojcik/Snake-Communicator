@@ -1,0 +1,13 @@
+﻿@model Snake.Models.ChannelModel
+
+<h3>Usunąć kanał @Model.Name ?</h3>
+<hr />
+<div class="center">
+    <form asp-action="Delete" asp-controller="Channel">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger my-button" />
+    </form>
+</div>
+<div>
+    <a class="btn btn-info my-button" asp-action="Index" asp-controller="Channel">Powrót</a>
+</div>

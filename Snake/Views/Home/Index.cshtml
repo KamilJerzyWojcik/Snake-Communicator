@@ -1,0 +1,32 @@
+﻿
+
+@if (User.Identity.IsAuthenticated)
+{
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="alert alert-success" role="alert">
+            Jesteś zalogowany administratorze @User.Identity.Name
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-success" role="alert">
+            Jesteś zalogowany użytkowniku @User.Identity.Name
+        </div>
+
+    }
+
+    <a asp-action="Create" asp-controller="Channel" class="btn btn-success btn-lg btn-block my-button">Utworz kanał</a>
+    <a asp-action="Index" asp-controller="Channel" class="btn btn-info btn-lg btn-block my-button">Lista moich kanałów</a>
+    <a asp-action="ShowAllChannel" asp-controller="Channel" class="btn btn-info btn-lg btn-block my-button">Wszystkie kanały</a>
+
+}
+else
+{
+    <div class="alert alert-primary" role="alert">
+        Zaloguj się do SNAKE!
+    </div>
+
+    <div><a asp-action="Login" asp-controller="Account" class="btn btn-success btn-lg btn-block my-button">Login</a></div>
+    <div><a asp-action="Register" asp-controller="Account" class="btn btn-primary btn-lg btn-block my-button">Rejestracja</a></div>
+}
