@@ -1,6 +1,7 @@
 # Snake-Communicator
 
 Technology: ASP.NET Core 2, Entity Framework, ASP.NET Identity
+
 Programming language: C#, HTML, CSS
 
 ## Introduction
