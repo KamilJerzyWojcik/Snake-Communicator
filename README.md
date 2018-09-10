@@ -2,6 +2,8 @@
 
 Technology: ASP.NET Core 2, Entity Framework, ASP.NET Identity
 
+Library: Bootstrap
+
 Programming language: C#, HTML, CSS
 
 ## Introduction
