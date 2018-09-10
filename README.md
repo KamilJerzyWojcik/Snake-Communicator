@@ -13,3 +13,5 @@ http://snake-communicator.azurewebsites.net/
 ## License
 
 Wszystkie prawa zastrzeżone.
+
+All rights reserved.
