@@ -17,7 +17,6 @@ namespace Snake.Context
         public DbSet<ChannelModel> Channels { get; set; }
         public DbSet<MessageModel> Messages { get; set; }
         public DbSet<UserModel> Users { get; set; }
-        //public DbSet<TestUser> Users { get; set; }
         public DbSet<UserChannelModel> UserChannels { get; set; }
 
 
