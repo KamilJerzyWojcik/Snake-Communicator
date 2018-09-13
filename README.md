@@ -10,8 +10,6 @@ Programming language: C#, HTML, CSS
 
 Web application for creating channels and posts by users. Register and login are necessary to creating channels and posting. Modification of posts is possible up to 10 minutes after publication.
 
-http://snake-communicator.azurewebsites.net/
-
 ## License
 
 The project is available as open source under the terms of the MIT License.
